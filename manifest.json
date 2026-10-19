@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "PSIT Attendance \u2014 Glass",
+  "version": "3.0.0",
+  "description": "Live PSIT ERP attendance, target planning and leave estimates. Calculations stay on your device.",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://erp.psit.ac.in/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "PSIT Attendance",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://erp.psit.ac.in/Student/MyAttendanceDetail*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
