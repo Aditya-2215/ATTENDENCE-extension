@@ -1,4 +1,4 @@
-# PSIT Attendance --- Glass Edition
+# PSIT Attendance
 
 A lightweight Chrome extension that helps students understand and plan
 their PSIT attendance. It provides a compact, glassmorphism-inspired
